@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageComponent } from './page/page.component';
 import { AboutComponent } from './about/about.component';
+import { StaffComponent } from './staff/staff.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AboutComponent } from './about/about.component';
     FooterComponent,
     HomeComponent,
     PageComponent,
-    AboutComponent
+    AboutComponent,
+    StaffComponent
   ],
   imports: [
     BrowserModule,
