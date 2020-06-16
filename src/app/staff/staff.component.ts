@@ -11,6 +11,7 @@ export class StaffComponent implements OnInit {
   staff: any;
   staffRequest: any;
   constructor(private http: HttpClient) {
+    this.staff = [];
     this.staffRequest = new StaffRequest();
     this.staffRequest.staffId = 9;
     this.http.post('http://localhost:4200/api/staff', this.staffRequest).subscribe(res => {
