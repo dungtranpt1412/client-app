@@ -1,1 +1,28 @@
-<p>{{content}}</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>ProductId</th>
+			<th>Name</th>
+			<th>Detail</th>
+			<th>Price</th>
+			<th>Image</th>
+			<th>CurrentPirce</th>
+			<th>ImageList</th>
+			<th>CatalogId</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let product of productList">
+			<td>{{product.productid}}</td>
+			<td>{{product.name}}</td>
+			<td>{{product.detail}}</td>
+			<td>{{product.price}}</td>
+			<td>{{product.image}}</td>
+			<td>{{product.currentpirce}}</td>
+			<td>{{product.imagelist}}</td>
+			<td>{{product.catalogid}}</td>
+			<td>{{product.status}}</td>
+		</tr>
+	</tbody>
+</table>

@@ -8,10 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  content: any;
+  productList: any;
   constructor(private http: HttpClient) {
-    this.http.get('http://localhost:4200/api/home').subscribe(res => {
-      this.content = res;
+    this.http.get('http://localhost:4200/api/product').subscribe(res => {
+      this.productList = res;
     }, error => {
       console.log(error.message);
     });
