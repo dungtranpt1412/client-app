@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageComponent } from './page/page.component';
 import { AboutComponent } from './about/about.component';
-import { StaffComponent } from './staff/staff.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { StaffComponent } from './staff/staff.component';
     HomeComponent,
     PageComponent,
     AboutComponent,
-    StaffComponent
   ],
   imports: [
     BrowserModule,
