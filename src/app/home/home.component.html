@@ -1,12 +1,18 @@
 <ul>
 	<li class="w-25 item" *ngFor="let product of productList">
 		<div>
+		<div>
 			<img class="image-item"
 				src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/05/new-angular-features.png?fit=512%2C512&ssl=1">
 		</div>
 		<div>
-			<span class="content-item text-danger">{{product.name}}</span>
-			<span class="content-item">Giá: {{product.price | currency: "VND"}}</span>
+			<button class="btn-buy btn btn-outline-success mr-1">Mua</button>
+			<button class="btn btn-outline-info">Chi tiết</button>
+		</div>
+		</div>
+		<div class="content-item">
+			<span class="d-block content-name text-danger">{{product.name}}</span>
+			<span class="d-block">Giá: {{product.price | currency: "VND"}}</span>
 		</div>
 	</li>
 </ul>
