@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { StaffRequest } from '../model/staff-request';
 
 @Component({
   selector: 'app-staff',
@@ -8,14 +7,13 @@ import { StaffRequest } from '../model/staff-request';
   styleUrls: ['./staff.component.scss']
 })
 export class StaffComponent implements OnInit {
-  staff: any;
+  listStaff: any;
   staffRequest: any;
+  key = 'listStaff';
   constructor(private http: HttpClient) {
-    this.staff = [];
-    this.staffRequest = new StaffRequest();
-    this.staffRequest.staffId = 9;
-    this.http.post('http://localhost:4200/api/staff', this.staffRequest).subscribe(res => {
-      this.staff = res;
+    this.listStaff = [];
+    this.http.get('http://localhost:4200/api/staff').subscribe(res => {
+      this.listStaff = res[this.key];
     }, error => {
       console.log(error.message);
     });

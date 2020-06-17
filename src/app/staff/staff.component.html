@@ -1,23 +1,28 @@
 <table class="table">
 	<thead>
 		<tr>
-			<th scope="col">id</th>
-			<th scope="col">firstname</th>
-			<th scope="col">lastname</th>
-			<th scope="col">dateofbirth</th>
-			<th scope="col">sex</th>
-			<th scope="col">address</th>
-			<th scope="col">email</th>
-			<th scope="col">phone</th>
+			<th scope="col">Id</th>
+			<th scope="col">FirstName</th>
+			<th scope="col">LastName</th>
+			<th scope="col">DateOfBirth</th>
+			<th scope="col">Sex</th>
+			<th scope="col">Address</th>
+			<th scope="col">Email</th>
+			<th scope="col">Phone</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
+		<tr *ngFor="let staff of listStaff">
 			<td>{{staff.id}}</td>
 			<td>{{staff.firstname}}</td>
 			<td>{{staff.lastname}}</td>
 			<td>{{staff.dateofbirth | date:'yyyy-MM-dd'}}</td>
-			<td>{{staff.sex}}</td>
+			<td>
+				<div *ngIf="staff.sex==1; then male; else female">
+				</div>
+				<ng-template #male>Male</ng-template>
+				<ng-template #female>Female</ng-template>
+			</td>
 			<td>{{staff.address}}</td>
 			<td>{{staff.email}}</td>
 			<td>{{staff.phone}}</td>
