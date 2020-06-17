@@ -1,28 +1,12 @@
-<table class="table">
-	<thead>
-		<tr>
-			<th>ProductId</th>
-			<th>Name</th>
-			<th>Detail</th>
-			<th>Price</th>
-			<th>Image</th>
-			<th>CurrentPirce</th>
-			<th>ImageList</th>
-			<th>CatalogId</th>
-			<th>Status</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let product of productList">
-			<td>{{product.productid}}</td>
-			<td>{{product.name}}</td>
-			<td>{{product.detail}}</td>
-			<td>{{product.price}}</td>
-			<td>{{product.image}}</td>
-			<td>{{product.currentpirce}}</td>
-			<td>{{product.imagelist}}</td>
-			<td>{{product.catalogid}}</td>
-			<td>{{product.status}}</td>
-		</tr>
-	</tbody>
-</table>
+<ul>
+	<li class="w-25 item" *ngFor="let product of productList">
+		<div>
+			<img class="image-item"
+				src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/05/new-angular-features.png?fit=512%2C512&ssl=1">
+		</div>
+		<div>
+			<span class="content-item text-danger">{{product.name}}</span>
+			<span class="content-item">Giá: {{product.price | currency: "VND"}}</span>
+		</div>
+	</li>
+</ul>
