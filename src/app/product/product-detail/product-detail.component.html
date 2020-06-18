@@ -1,1 +1,18 @@
-{{product.detail}}
+<div>
+	<div class="row border">
+		<div class="col-sm-3 border-right">
+			<img class="image-item"
+				src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/05/new-angular-features.png?fit=512%2C512&ssl=1">
+		</div>
+		<div class="col ml-5">
+			<p>Tên: {{product.name}}</p>
+			<p>Model: HDCVI</p>
+			<p>Giá: {{product.price | currency:"VND"}}</p>
+			<span>Số lượng: </span><input class="col-sm-1 m-2" type="number" value="1">
+			<p>Bảo hành: 12 tháng</p>
+		</div>
+	</div>
+	<div class="row">
+
+	</div>
+</div>
