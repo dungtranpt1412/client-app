@@ -1,10 +1,10 @@
 <div class="row">
-	<div class="col-lg-3 col-md-4 col-sm-6 col-xs item m-auto" *ngFor="let product of productList">
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs item m-auto" *ngFor="let product of productList" routerLink="/Product/{{product.productid}}">
 		<div>
 			<img class="image-item" src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/05/new-angular-features.png?fit=512%2C512&ssl=1">
 		</div>
 		<div>
-			<button class="btn-buy btn btn-outline-success mr-1">Mua</button>
+			<button routerLink="/About" class="btn-buy btn btn-outline-success mr-1">Mua</button>
 			<button routerLink="/Product/{{product.productid}}" class="btn btn-outline-info">Chi tiết</button>
 		</div>
 		<div class="product-name">
