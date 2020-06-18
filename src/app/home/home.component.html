@@ -1,18 +1,17 @@
-<ul>
-	<li class="w-25 item mb-1 ml-1" *ngFor="let product of productList">
+<div class="row">
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs item m-auto" *ngFor="let product of productList">
 		<div>
-		<div>
-			<img class="image-item"
-				src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/05/new-angular-features.png?fit=512%2C512&ssl=1">
+			<img class="image-item" src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/05/new-angular-features.png?fit=512%2C512&ssl=1">
 		</div>
 		<div>
 			<button class="btn-buy btn btn-outline-success mr-1">Mua</button>
 			<button routerLink="/Product/{{product.productid}}" class="btn btn-outline-info">Chi tiết</button>
 		</div>
+		<div class="product-name">
+			<div class="product-text text-danger">{{product.name}}</div>
 		</div>
-		<div class="content-item">
-			<span class="d-block content-name text-danger">{{product.name}}</span>
-			<span class="d-block">Giá: {{product.price | currency: "VND"}}</span>
+		<div>
+			<div>Giá: {{product.price | currency: "VND"}}</div>
 		</div>
-	</li>
-</ul>
+	</div>
+</div>

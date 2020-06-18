@@ -1,22 +1,27 @@
 .item {
-  display: inline-block;
   height: 330px;
   max-height: 330px;
   text-align: center;
-  max-width: 23%;
-  background-color: #faf5f5;
 }
+
 .image-item {
   height: 200px;
   text-align: center;
   max-width: 90%;
 }
-.content-item{
-	height: 72px;
+.product-name {
+  height: 36px;
 }
-.btn-buy{
-	width: 76.31px;
+.btn-buy {
+  width: 76.31px;
 }
-.content-name{
-	height: 48px;
+
+.product-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  height: inherit;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
